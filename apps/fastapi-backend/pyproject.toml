@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "fastapi-backend"
+version = "0.1.0"
+description = ""
+authors = ["Dan <dev@madeleydesignstudio.org>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+start = "fastapi_backend.run:main"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+fastapi = "^0.115.2"
+uvicorn = "^0.31.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
