@@ -14,7 +14,7 @@ export default function HomePage() {
       <SafeAreaView style={styles.safeArea}>
         <StatusBar barStyle="dark-content" backgroundColor="#fff" />
         <View style={styles.content}>
-          <Text>Home Page</Text>
+          <Text>Home Pagesd</Text>
         </View>
       </SafeAreaView>
     </View>
