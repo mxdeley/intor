@@ -1,22 +1,14 @@
-import React from "react";
-import {
-  Text,
-  SafeAreaView,
-  StatusBar,
-  View,
-  Platform,
-  StyleSheet,
-} from "react-native";
+import { Text, View, StyleSheet } from "react-native";
+/* @tutinfo Import <CODE>Link</CODE> component from <CODE>expo-router</CODE>. */ import { Link } from "expo-router";
 
-export default function HomePage() {
+export default function Index() {
   return (
     <View style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
-        <StatusBar barStyle="dark-content" backgroundColor="#fff" />
-        <View style={styles.content}>
-          <Text>Home Pagesd</Text>
-        </View>
-      </SafeAreaView>
+      <Text style={styles.text}>Home screen</Text>
+
+      <Link href="/about" style={styles.button}>
+        Go to About screen
+      </Link>
     </View>
   );
 }
@@ -24,15 +16,17 @@ export default function HomePage() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-  },
-  safeArea: {
-    flex: 1,
-  },
-  content: {
-    flex: 1,
-    justifyContent: "flex-start",
+    backgroundColor: "#25292e",
     alignItems: "center",
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+    justifyContent: "center",
+  },
+  text: {
+    color: "#fff",
+  },
+  /* @tutinfo Add the style of <CODE>fontSize</CODE>, <CODE>textDecorationLine</CODE>, and <CODE>color</CODE> to <CODE>Link</CODE> component. */
+  button: {
+    fontSize: 20,
+    textDecorationLine: "underline",
+    color: "#fff",
   },
 });

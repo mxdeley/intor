@@ -1,23 +1,9 @@
-import React from "react";
-import {
-  Text,
-  SafeAreaView,
-  StatusBar,
-  View,
-  Platform,
-  StyleSheet,
-  TextInput,
-} from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 
-export default function HomePage() {
+export default function AboutScreen() {
   return (
     <View style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
-        <StatusBar barStyle="dark-content" backgroundColor="#fff" />
-        <View style={styles.content}>
-          <Text>About Page</Text>
-        </View>
-      </SafeAreaView>
+      <Text style={styles.text}>About screen</Text>
     </View>
   );
 }
@@ -25,15 +11,11 @@ export default function HomePage() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-  },
-  safeArea: {
-    flex: 1,
-  },
-  content: {
-    flex: 1,
-    justifyContent: "flex-start",
+    backgroundColor: "#25292e",
+    justifyContent: "center",
     alignItems: "center",
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
+  },
+  text: {
+    color: "#fff",
   },
 });
