@@ -1,81 +1,95 @@
-# Turborepo starter
+# Student Utility Bill Organizer
 
-This is an official starter Turborepo.
+A personal assistant application designed to help students manage and organize their utility bills efficiently.
 
-## Using this example
+## Table of Contents
 
-Run the following command:
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
-```sh
-npx create-turbo@latest
+## Overview
+
+The Student Utility Bill Organizer is a comprehensive solution for students to track, manage, and optimize their utility expenses. This application provides a user-friendly interface across web and mobile platforms, leveraging AI to offer personalized insights and recommendations.
+
+## Features
+
+- Bill tracking and organization
+- Expense categorization
+- Payment reminders
+- Roommate bill splitting
+- AI-powered cost-saving suggestions
+- Usage analytics and reports
+- Multi-platform support (Web and Mobile)
+
+## Tech Stack
+
+This project utilizes a modern and robust tech stack:
+
+### Core
+
+- **Turborepo**: Monorepo management
+- **Expo**: Mobile app development
+- **Next.js**: Web application framework
+- **Hono**: Web framework for backend services
+- **FastAPI**: Backend for AI functionality
+- **Poetry**: Python package management
+
+### Styling
+
+- **TailwindCSS**: Utility-first CSS framework
+- **Shadcn**: UI component library
+
+### Authentication
+
+- **Clerk**: User authentication and management
+
+### AI and Data Processing
+
+- **Langchain**: Large language model integration
+- **Firecrawl**: Web scraping and data extraction
+- **CrewAI**: AI agent orchestration
+
+### Analytics and Monitoring
+
+- **Posthog**: Product analytics
+- **OpenPanel**: Data visualization and reporting
+- **Sentry**: Error tracking and performance monitoring
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies:
+   ```
+   bun install
+   ```
+3. Set up environment variables (refer to `.env.example`)
+4. Run the development server:
+   ```
+   bun run dev
+   ```
+
+## Project Structure
+
+```
+student-utility-organizer/
+├── apps/
+│   ├── expo/    # Mobile application
+│   ├── web/     # Next.js web application
+│   └── api/     # FastAPI backend
+├── packages/    # Shared packages
+├── services/    # Microservices
+└── tools/       # Development tools
 ```
 
-## What's inside?
+## Contributing
 
-This Turborepo includes the following packages/apps:
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for more details.
 
-### Apps and Packages
+## License
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+This project is licensed under the [MIT License](LICENSE).
