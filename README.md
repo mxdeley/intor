@@ -1,81 +1,93 @@
-# Turborepo starter
+# Intor - Student Utility Bill Organizer
 
-This is an official starter Turborepo.
+Intor is a powerful personal assistant designed to help students efficiently manage and organize their utility bills. This CRM-style application leverages cutting-edge technologies to provide a seamless experience across mobile and web platforms.
 
-## Using this example
+## Tech Stack
 
-Run the following command:
+### Frontend
 
-```sh
-npx create-turbo@latest
-```
+- **Mobile**: Expo
+- **Web**: Next.js
+- **Styling**:
+  - TailwindCSS
+  - Shadcn
 
-## What's inside?
+### Backend
 
-This Turborepo includes the following packages/apps:
+- **Web Framework**: Hono
+- **AI Functionality**: FastAPI
+- **Authentication**: Clerk
 
-### Apps and Packages
+### AI Technologies
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- Langchain
+- Firecrawl
+- CrewAI
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+### Analytics
 
-### Utilities
+- Posthog
+- OpenPanel
 
-This Turborepo has some additional tools already setup for you:
+### Application Monitoring
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+- Sentry
 
-### Build
+### Package Managers
 
-To build all apps and packages, run the following command:
+- Turborepo (Monorepo management)
+- Bun (JavaScript runtime and package manager)
+- Poetry (Python package manager)
 
-```
-cd my-turborepo
-pnpm build
-```
+## Architecture
 
-### Develop
+Intor is built using a monorepo structure managed by Turborepo, with the following main components:
 
-To develop all apps and packages, run the following command:
+1. **Mobile App (Expo)**
 
-```
-cd my-turborepo
-pnpm dev
-```
+   - Provides a native mobile experience for iOS and Android users
 
-### Remote Caching
+2. **Web App (Next.js)**
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+   - Offers a responsive web interface for desktop and mobile browsers
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+3. **Backend Services**
 
-```
-cd my-turborepo
-npx turbo login
-```
+   - Hono: Handles non-AI related backend functionality
+   - FastAPI: Manages AI-powered features and integrations
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+4. **Shared Components**
+   - Common UI components and utilities shared between mobile and web apps
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+## Key Features
 
-```
-npx turbo link
-```
+- Intuitive bill organization and tracking
+- AI-powered insights and recommendations
+- Cross-platform synchronization
+- Secure authentication and data protection
+- Real-time analytics and reporting
 
-## Useful Links
+## Getting Started
 
-Learn more about the power of Turborepo:
+1. Clone the repository
+2. Install dependencies using Bun
+3. Set up environment variables
+4. Run the development servers for mobile, web, and backend services
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+Detailed setup instructions can be found in the `CONTRIBUTING.md` file.
+
+## Contributing
+
+We welcome contributions from the community! Please read our `CONTRIBUTING.md` file for guidelines on how to submit pull requests, report issues, and suggest improvements.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+## Support
+
+For any questions or support, please open an issue in the GitHub repository or contact our support team at support@intor.app.
+
+---
+
+Intor - Simplifying utility management for students, one bill at a time.
